@@ -1,31 +1,14 @@
 #define _GNU_SOURCE
 #include <unistd.h>
-#include <fcntl.h>
 #include <stdio.h>
 #include <string.h>
-#include <sys/stat.h>
 #include <stdlib.h>
 #include <sys/time.h>
-#include <time.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <inttypes.h>
-#include <sys/queue.h>
-#include <netinet/in.h>
-#include <setjmp.h>
-#include <stdarg.h>
-#include <ctype.h>
-#include <errno.h>
-#include <getopt.h>
-#include <signal.h>
-#include <stdbool.h>
 #include <pthread.h>
 #include <stdint.h>
 #include <pthread.h>
 #include <stdlib.h>
 #include <errno.h>
-
 
 #define handle_error_en(en, msg) \
                do { errno = en; perror(msg); exit(EXIT_FAILURE); } while (0)
