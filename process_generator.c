@@ -48,12 +48,18 @@ int main(){
     pthread_t thread;
     struct sched_param param;
 
+    // select policies
     get_policy('b', &policy);
     param.sched_priority = strtol("0", NULL, 0);
 
     rtn = pthread_setschedparam(pthread_self(), policy, &param);
     if (rtn != 0)
         handle_error_en(rtn, "pthread_setschedparam");
+
+    // fork mutliple processes
+    for(int i=0; i<3; i++){
+        fork();
+    }
 
     while(1){
         sleep(1);
